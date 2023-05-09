@@ -19,10 +19,25 @@ export default function RegisterPage() {
     <div className="mt-4 grow flex item-center justify-around">
       <div className="mb-64">
         <h1 className="text-4xl text-center mb-4">Register</h1>
-        <form className="max-w-md mx-auto">
-          <input type="name" placeholder="name"></input>
-          <input type="email" placeholder="your@email.com"></input>
-          <input type="password" placeholder="password"></input>
+        <form className="max-w-md mx-auto" onSubmit={registerUser}>
+          <input
+            type="name"
+            placeholder="name"
+            value={name}
+            onChange={(ev) => setName(ev.target.value)}
+          ></input>
+          <input
+            type="email"
+            placeholder="your@email.com"
+            value={email}
+            onChange={(ev) => setEmail(ev.target.value)}
+          ></input>
+          <input
+            type="password"
+            placeholder="password"
+            value={password}
+            onChange={(ev) => setPassword(ev.target.value)}
+          ></input>
           <button className="primary" type="register">
             Register
           </button>
