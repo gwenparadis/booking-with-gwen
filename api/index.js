@@ -6,7 +6,7 @@ const User = require("./models/User.js");
 require("dotenv").config();
 const app = express();
 
-const bcryptSalt = bcrypt.genSalt(10);
+const bcryptSalt = bcrypt.genSaltSync(10);
 
 app.use(express.json());
 app.use(
